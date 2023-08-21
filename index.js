@@ -1,16 +1,23 @@
 import { createStore } from 'redux';
 const store = createStore(reducer);
-
+const history=[]
 //reducer
-function reducer(state={amount:1}, action) {
+function reducer(state={bal:0}, action) {
     if(action.type==='increment'){
-        return {amount:state.amount+1};
+        return {bal:state.bal+1};
+    // state.bal=state.bal+1;
     }
     return  state ;
 }
 //global this.state
-console.log(store.getState())
+
+store.subscribe(()=>{
+    history.push(store.getState())
+    console.log(history)
+    // console.log(store.getState())
+})
+setInterval(() => {
 store.dispatch({type:'increment'})
-console.log(store.getState())
+}, 1000);
 
  
