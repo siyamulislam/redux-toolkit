@@ -28,7 +28,7 @@ const counterReducer = (state = initialCounterState, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
-        ...state,
+        ...state, // no need
         count: state.count + 1,
       };
     case DECREMENT:
