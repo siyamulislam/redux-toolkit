@@ -1,0 +1,9 @@
+npm i redux
+
+//json server
+npm i -g json-server
+    //start server
+    json-server db.json
+npm i axios
+npm i redux-thunk
+
