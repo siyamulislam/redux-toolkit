@@ -1,0 +1,1 @@
+const state= {account:{balance:100},bonus:{points:2}};
